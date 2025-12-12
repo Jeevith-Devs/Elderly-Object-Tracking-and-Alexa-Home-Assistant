@@ -1,0 +1,39 @@
+Project Requirements
+
+1. Hardware Requirements
+
+ESP32 / ESP8266 – 1 unit – Microcontroller to read sensors and send data to cloud.
+IR Sensors – 4 units – Detect objects entering four corner zones.
+USB Cable – 1 – Power and upload code to ESP32.
+Breadboard & Jumper Wires – As required – For circuit connections during prototyping.
+Power Supply / Adapter – 1 – To provide stable 5V or 3.3V to ESP32.
+Optional: LEDs – 4 – Indicate detection visually for testing.
+Objects (keys, wallet, medicine box, books, etc.) – 3–5 – Test objects for tracking demonstration.
+
+2. Software Requirements
+
+a. Development Platforms / Tools
+Arduino IDE – Write and upload ESP32/ESP8266 code.
+Node.js + Express – Cloud backend to store object locations.
+Firebase / MongoDB (Optional) – Database for persistent storage.
+AWS Lambda – Host Alexa skill backend logic.
+Alexa Developer Console – Create and configure custom Alexa skill.
+Web Browser – Access backend APIs and test endpoints.
+HTTP Client / Postman – Test backend endpoints (optional).
+
+b. Software Modules
+Microcontroller Module – Reads IR sensor inputs, detects objects, and sends data to the cloud backend.
+Cloud Backend Module – Receives data from ESP32, stores object location, and exposes API for Alexa queries.
+Database Module (Optional) – Stores historical object locations and timestamps.
+Alexa Skill Module – Handles voice commands, queries cloud backend, and responds with last-seen object zones.
+User Interface Module (Optional) – Mobile app or web interface for visual representation of objects in the room.
+
+3. Network Requirements
+Stable Wi-Fi – ESP32 connects to cloud backend.
+Internet access – Required for Alexa skill to query cloud backend.
+
+4. Other Requirements
+Room setup – Four corners must be accessible for sensor placement.
+Detection space – Objects must pass within IR sensor range.
+Minimal obstructions – Avoid blocking sensors with furniture.
+Testing objects – Small objects to verify detection system.
